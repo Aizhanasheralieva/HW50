@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<style>
+    .film-card {
+        display: inline-block;
+        margin: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        width: 300px;
+        padding: 5px;
+    }
+</style>
+<body>
+    <div id="app"></div>
+
+
+<script type="text/babel">
+
+    const FilmCardWithPosters = ({filmTitle, genre, yearOfRelease, filmURL}) => {
+        return (
+            <div className="film-card">
+                <img width="100%" height="auto" src={filmURL} alt={'Photo of ' + filmTitle}/>
+                <h2>{filmTitle}</h2>
+                <p><strong>Genre: </strong> {genre}</p>
+                <p><strong>Released at:</strong> {yearOfRelease}</p>
+            </div>
+        )
+    };
+
+    const filmContent = (
+        <>
+            <FilmCardWithPosters filmTitle="Gladiator 2" genre="action, drama, adventure" yearOfRelease="2024" filmURL="https://avatars.mds.yandex.net/get-kinopoisk-image/1898899/ba4c81cc-30b8-448f-8b58-a315f93e567d/600x900" />
+            <FilmCardWithPosters filmTitle="Moana2" genre="musical, adventures" yearOfRelease="2024" filmURL="https://upload.wikimedia.org/wikipedia/ru/thumb/1/19/%D0%9C%D0%BE%D0%B0%D0%BD%D0%B0_2.jpg/541px-%D0%9C%D0%BE%D0%B0%D0%BD%D0%B0_2.jpg" />
+            <FilmCardWithPosters filmTitle="Venom: The Last Dance" genre="superheroics, action movie, fantasy" yearOfRelease="2024" filmURL="https://upload.wikimedia.org/wikipedia/en/a/a3/Venom_The_Last_Dance_Poster.jpg"/>
+        </>
+    );
+
+    ReactDOM.render(filmContent, document.getElementById('app'));
+
+</script>
+</body>
+</html>
