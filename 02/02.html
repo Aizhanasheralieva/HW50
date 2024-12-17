@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link href="style.css" rel="stylesheet"/>
+</head>
+<body>
+<div id="app"></div>
+
+
+<script type="text/babel">
+
+    const Header = () => {
+        return (
+            <header className="header-info">
+                <a className="header-img">
+                    <img src="https://radiantsmiledentalbd.com/wp-content/uploads/2023/06/logo-2048x589.png"
+                         alt="Radiant Smile Dental Clinic"/>
+                </a>
+                <div className="header-input">
+                    <input className="search-input" placeholder="Search for"/>
+                    <a className="info">About</a>
+                    <a className="info">Contacts</a>
+                </div>
+            </header>
+        )
+    };
+
+    const Sidebar = () => {
+        return (
+            <aside className="sidebar">
+                <nav>
+                    <ul className="main-nav-list">
+                        <strong>
+                            <li className="main-nav-item"><a className="main-nav-link" href="#">Home</a></li>
+                        </strong>
+                        <li className="main-nav-item"><a className="main-nav-link" href="#">Gallery</a></li>
+                        <li className="main-nav-item"><a className="main-nav-link" href="#">Services</a></li>
+                        <li className="main-nav-item"><a className="main-nav-link" href="#">FAQ</a></li>
+                        <li className="main-nav-item"><a className="main-nav-link" href="#">Reviews</a></li>
+                        <li className="main-nav-item"><a className="main-nav-link" href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <div>
+                    <h2 className="text-title">Best Dental Care</h2>
+                    <h1 className="text-title">Radiant Smile Dental Clinic</h1>
+                    <p className="text">Unlock the radiance in your smile at Radiant Smile Dental Clinic, where high-quality care meets
+                         expertise in a state-of-the-art facility.
+                    </p>
+                    <a href="#" ><button className="btn">Get an appointment</button></a>
+                </div>
+            </aside>
+        )
+    };
+
+    const Content = () => {
+        return (
+            <main className="content">
+                <h1 className="main-text-title">Equipped With Modern Technology</h1>
+                <h3>Transforming Your Dental Experience</h3>
+                <p className="some-text">Radiant Smile Dental Clinic proudly embraces state-of-the-art modern
+                    technology, earning us national
+                    and international recognition for our dental innovations in Kyrgyzstan. By utilizing low-radiation
+                    dental X-rays, advanced oral cancer screenings, and a cutting-edge 3D digital impression system, we
+                    are dedicated to providing you with accurate diagnoses, personalized solutions, and comfort.
+                    Discover the future of dentistry with our technological equipment.
+                </p>
+                <a href="#">
+                    <button className="btn">Learn more</button>
+                </a>
+                <h2>Witness the Radiant Transformation</h2>
+                <p className="some-text">Discover the incredible smile transformations at Radiant Smile Dental Clinic.
+                    Our skilled team,
+                    cutting-edge technology, and caring approach create amazing results. Watch our engaging videos and
+                    be inspired by the magic of a radiant smile.</p>
+                <a href="#">
+                    <button className="btn">Learn more</button>
+                </a>
+            </main>
+        )
+    };
+
+    const Footer = () => {
+        return (
+            <footer>
+                <div className="footer-info">
+                    <a>
+                        <img width="150"
+                             src="https://radiantsmiledentalbd.com/wp-content/uploads/2023/06/logo-white-1.png"
+                             alt="Radiant Smile Dental Clinic"/>
+                    </a>
+                    <div>
+                        <a className="footer-link-info"><strong>Home</strong></a>
+                        <a className="footer-link-info"><strong>Gallery</strong></a>
+                        <a className="footer-link-info"><strong>About Radiant Smile Dental</strong></a>
+                        <a className="footer-link-info"><strong>Services</strong></a>
+                        <a className="footer-link-info"><strong>Contacts</strong></a>
+                    </div>
+                    <p className="footer-link-info">© 2024 Radiant Smile Dental Clinic</p>
+                </div>
+            </footer>
+        )
+
+    }
+
+    const clinicContent = (
+        <>
+            <Header/>
+            <Sidebar/>
+            <Content/>
+            <Footer/>
+        </>
+    )
+    ReactDOM.render(clinicContent, document.getElementById('app'));
+</script>
+</body>
+</html>
